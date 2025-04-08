@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noom Support Tools</title>
+</head>
+<body>
+    <h1>Noom Support Tools</h1>
+    <form method="POST">
+        <label for="channel">Select Channel:</label>
+        <select id="channel" name="channel" required>
+            <option value="Email">Email</option>
+            <option value="Chat">Chat</option>
+        </select><br><br>
+
+        <label for="customer_name">Customer Name:</label>
+        <input type="text" id="customer_name" name="customer_name" required><br><br>
+
+        <label for="concern_type">Concern Type:</label>
+        <select id="concern_type" name="concern_type" required>
+            <option value="Refund">Refund</option>
+            <option value="Partial Refund">Partial Refund</option>
+            <option value="Billing/Clarifications">Billing/Clarifications</option>
+            <option value="Tech Issue">Tech Issue</option>
+            <option value="Medications">Medications</option>
+        </select><br><br>
+
+        <label for="refund_amount">Refund Amount:</label>
+        <input type="text" id="refund_amount" name="refund_amount"><br><br>
+
+        <label for="weight_months">Weight Subscription Months:</label>
+        <input type="text" id="weight_months" name="weight_months"><br><br>
+
+        <label for="weight_price">Weight Subscription Price:</label>
+        <input type="text" id="weight_price" name="weight_price"><br><br>
+
+        <label for="premium_months">Premium Subscription Months:</label>
+        <input type="text" id="premium_months" name="premium_months"><br><br>
+
+        <label for="premium_price">Premium Subscription Price:</label>
+        <input type="text" id="premium_price" name="premium_price"><br><br>
+
+        <button type="submit">Generate Response</button>
+    </form>
+
+    {% if response %}
+    <h2>Generated Response:</h2>
+    <pre>{{ response }}</pre>
+    {% endif %}
+</body>
+</html>

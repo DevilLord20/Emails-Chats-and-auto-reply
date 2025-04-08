@@ -1,0 +1,10 @@
+{
+    "name": "Noom Support Tools",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {}
+    }
+}
